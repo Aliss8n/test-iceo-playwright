@@ -41,6 +41,24 @@ Alternatively, for in interactive mode:
 npm run test:headless
 ```
 
+## Generating Allure Report
+
+After running the tests, you can generate a detailed Allure Report to visualize the test execution results.
+
+To generate the report, run:
+
+```bash
+npm run allure:generate
+```
+
+To open the generated report in your browser (if supported by your system):
+
+```bash
+npm run allure:open
+```
+
+The report will contain an overview of all executed scenarios, status (passed/failed), steps, and more.
+
 ## Continuous Integration (CI/CD)
 
 For automated execution in a continuous integration environment, this project is configured with GitHub Actions. The pipeline will automatically run all tests on specific events, ensuring code quality and functionality.
@@ -65,3 +83,7 @@ features/
 ## Example - Automation in Action
 
 ![running](test-result.png)
+
+## Example - Allure Report
+
+![allure](allure-result.png)

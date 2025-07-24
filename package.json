@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js --tags 'not @ignore' --require-module ts-node/register --require 'steps/**/*.steps.ts' --require 'support/**/*.ts' 'features/**/*.feature'",
-    "test:headless": "HEADLESS=true npm test"
+    "test": "cucumber-js --tags 'not @ignore' --require-module ts-node/register --require 'steps/**/*.steps.ts' --require 'support/**/*.ts' 'features/**/*.feature' -format pretty --format json:reports/cucumber-report.json --format allure-cucumberjs/reporter",
+    "test:headless": "HEADLESS=true npm test",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report"
   },
   "keywords": [],
   "author": "Alisson Fogaça",
@@ -12,8 +14,11 @@
   "description": "Automation tests to ICEO",
   "devDependencies": {
     "@cucumber/cucumber": "^12.1.0",
+    "@cucumber/messages": "^28.1.0",
     "@playwright/test": "^1.54.1",
     "@types/node": "^24.1.0",
+    "allure-commandline": "^2.34.1",
+    "allure-cucumberjs": "^3.3.2",
     "dotenv": "^17.2.0",
     "playwright": "^1.54.1",
     "ts-node": "^10.9.2",
