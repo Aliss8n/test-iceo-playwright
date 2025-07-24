@@ -41,6 +41,12 @@ Alternatively, for in interactive mode:
 npm run test:headless
 ```
 
+## Continuous Integration (CI/CD)
+
+For automated execution in a continuous integration environment, this project is configured with GitHub Actions. The pipeline will automatically run all tests on specific events, ensuring code quality and functionality.
+
+To view the results of the automated pipeline, navigate to the "Actions" tab in the GitHub repository.
+
 ## Test Coverage
 
 The following test scenarios are included:
